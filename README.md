@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 ![婚礼学报 demo](https://github.com/user-attachments/assets/57f24fee-93a2-42c4-ad3c-3f65371d2fbf)
 
+=======
+>>>>>>> 5802487773548ca29982b20410e33488144a4925
 # Journal of Love · 婚礼学报 LaTeX 模板
 
 ![LaTeX](https://img.shields.io/badge/LaTeX-XeLaTeX-008080?logo=latex&logoColor=white)
