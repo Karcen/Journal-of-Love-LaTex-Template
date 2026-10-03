@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ![婚礼学报 demo](https://github.com/user-attachments/assets/57f24fee-93a2-42c4-ad3c-3f65371d2fbf)
 
 # Journal of Love · 婚礼学报 LaTeX 模板
@@ -7,11 +6,11 @@
 ![Language](https://img.shields.io/badge/Language-%E4%B8%AD%E6%96%87%20%7C%20English-4b8bbe)
 ![Output](https://img.shields.io/badge/Output-2%20pages-9e7bb5)
 
-**把一段私人关系，排版成一篇 SCI 期刊论文。** / *Typeset your love story as a journal article.*
+把一段私人关系，排版成一篇 SCI 期刊论文。 / *Typeset your love story as a journal article.*
 
-用 LaTeX 复刻 Elsevier 期刊首页版式的婚礼请柬 / 恋爱官宣模板：期刊刊头、卷期页码、ARTICLE INFO 与 ABSTRACT 分栏、通讯作者脚注、DOI、投稿—修回—接收日期，以及一枚手绘的 Cupid 出版社标志。
+用 LaTeX 把一场婚礼或一次官宣排成 Elsevier 期刊论文的样子：刊头、卷期页码、ARTICLE INFO 与 ABSTRACT 分栏、通讯作者脚注、DOI、投稿和接收日期，角落里还有一枚手绘的 Cupid 出版社标志。
 
-A LaTeX template that turns a wedding invitation or a relationship announcement into an Elsevier-style journal article — masthead, volume/issue/pages, split ARTICLE INFO & ABSTRACT panel, corresponding-author footnote, DOI, received/revised/accepted dates, and a hand-drawn Cupid publisher mark.
+A LaTeX template that sets a wedding invitation or a relationship announcement as an Elsevier-style journal article: masthead, volume and issue, the split ARTICLE INFO and ABSTRACT panel, corresponding-author footnote, DOI, submission dates, and a hand-drawn Cupid publisher mark.
 
 [中文文档](#中文文档) · [English Documentation](#english-documentation)
 
@@ -21,33 +20,33 @@ A LaTeX template that turns a wedding invitation or a relationship announcement 
 
 ### 这是什么
 
-一份**可以直接改的 LaTeX 模板**：把两个人之间的故事写成一篇结构完整的研究论文。
+这是一个可以直接改的 LaTeX 模板，把两个人之间的故事写成一篇结构完整的研究论文。
 
-- **两种场景**：`love_announcement.tex`（恋爱官宣）与 `wedding_journal.tex`（婚礼学报 / 请柬）。
-- **唯一数据源**：所有人名、日期、地点都集中在 `couple-info.tex`，改一处，两份文档同步更新。
-- **仿 SCI 版式**：页面 210 × 280 mm、双栏正文、页眉页脚、三线表、图注小字，全部按真实期刊页面用绝对坐标（bp）复刻。
-- **中英混排**：正文同时使用西文与中文字体，`fontspec` + `xeCJK` 分别控制。
-- **照片可选**：把照片放进 `assets/`，文件不存在时自动画一个灰色占位框，不会编译报错。
+- `love_announcement.tex` 用于恋爱官宣，`wedding_journal.tex` 用于婚礼学报或请柬。
+- 两份模板共用 `couple-info.tex` 里的数据，改一处就同步更新。
+- 版式照真实期刊页面复刻：210 × 280 mm 页面、双栏正文、页眉页脚、三线表、小号图注，位置都用绝对坐标（bp）确定。
+- 正文的中西文分别交给 `fontspec` 和 `xeCJK`。
+- 照片可选。把图片放进 `assets/` 就行；没有图片时模板画一个灰色占位框，编译照常通过。
 
 #### 关于 520 和 1314
 
-模板里的期刊元数据都埋了数字梗：**520** = 我爱你，**1314** = 一生一世。所以卷号是 1314、期号是 520、页码从 520 开始、DOI 是 `10.1314/jlove.520.521`，版权行写着 *All hearts reserved*。不喜欢可以全部改掉（见「自定义」）。
+期刊元数据里埋了数字梗：520 谐音“我爱你”，1314 谐音“一生一世”。所以婚礼版的卷号是 1314、期号是 520，页码从 520 开始，DOI 写成 `10.1314/jlove.520.521`，版权行是 *All hearts reserved*。这些都能改，见「自定义」。
 
 ### 效果预览
 
-**恋爱官宣版 · `love_announcement.tex`**
+恋爱官宣版 `love_announcement.tex`：
 
 | 第 1 页（期刊首页） | 第 2 页（正文与参考文献） |
 | :---: | :---: |
 | [![恋爱官宣版第 1 页](preview/love-announcement-p1.png)](preview/love-announcement-p1.png) | [![恋爱官宣版第 2 页](preview/love-announcement-p2.png)](preview/love-announcement-p2.png) |
 
-**婚礼学报版 · `wedding_journal.tex`**
+婚礼学报版 `wedding_journal.tex`：
 
 | 第 1 页（期刊首页） | 第 2 页（正文与参考文献） |
 | :---: | :---: |
 | [![婚礼学报版第 1 页](preview/wedding-journal-p1.png)](preview/wedding-journal-p1.png) | [![婚礼学报版第 2 页](preview/wedding-journal-p2.png)](preview/wedding-journal-p2.png) |
 
-点击任意图片可查看 300 dpi 原图（3571 × 4762）。第 2 页 Figure 1 里那个灰框是**没放照片时自动生成的占位框**——放进 `assets/` 后就会变成真实照片。
+点击任意图片可以看 300 dpi 原图（3571 × 4762）。第 2 页 Figure 1 里的灰框就是没放照片时的占位框，把照片放进 `assets/` 就会换成真图。
 
 ### 文件结构
 
@@ -71,14 +70,14 @@ Journal-of-Wedding-Latex-Template/
 
 | 项目 | 要求 |
 | --- | --- |
-| TeX 发行版 | TeX Live / MacTeX（**建议完整版**，需要 `xeCJK`、`titlesec` 等；实测 TeX Live 2025） |
-| 编译引擎 | **XeLaTeX（必须）**，不能用 pdfLaTeX / LuaLaTeX |
-| 编译次数 | 至少 **2 次**（首页用 `remember picture` 绝对定位，需第二遍才能定稳） |
+| TeX 发行版 | TeX Live 或 MacTeX，建议装完整版（需要 `xeCJK`、`titlesec` 等）。实测 TeX Live 2025 |
+| 编译引擎 | XeLaTeX，不能用 pdfLaTeX 或 LuaLaTeX |
+| 编译次数 | 至少 2 次。首页用 `remember picture` 绝对定位，第二遍才定得下来 |
 | 宏包 | `fontspec`、`xeCJK`、`geometry`、`xcolor`、`tikz`、`graphicx`、`multicol`、`amsmath`、`amssymb`、`mathtools`、`booktabs`、`tabularx`、`array`、`caption`、`fancyhdr`、`titlesec`、`hyperref`、`microtype`、`enumitem`、`etoolbox`、`ragged2e`（以及文档类 `extarticle`） |
 
-### 字体（最容易踩坑的一步）
+### 字体
 
-`journaloflove-sci.sty` 在开头指定了 6 种字体。**缺少字体时 XeLaTeX 会直接报错中止**：
+`journaloflove-sci.sty` 开头指定了 6 种字体。少一种，XeLaTeX 就会直接报错停下：
 
 ```
 ! Package fontspec Error: The font "Charis SIL" cannot be found.
@@ -86,16 +85,16 @@ Journal-of-Wedding-Latex-Template/
 
 | 字体 | 用途 | 来源 | 授权 | TeX Live 自带 |
 | --- | --- | --- | --- | --- |
-| Charis SIL | 正文西文 / 数学外文 | [software.sil.org/charis](https://software.sil.org/charis/) | SIL OFL 1.1 | ✅（TTF 在 `fonts/truetype/SIL/charissil/`） |
-| Universalis ADF Std | 无衬线（标志、页眉小字） | [CTAN: universalis](https://ctan.org/pkg/universalis) | GPL v2+（含字体例外） | ✅ |
-| Liberation Mono | 等宽（占位框里的路径文字） | [liberationfonts](https://github.com/liberationfonts/liberation-fonts) | SIL OFL 1.1 | ❌ |
-| Noto Serif CJK SC | 中文正文 | [notofonts/noto-cjk](https://github.com/notofonts/noto-cjk) | SIL OFL 1.1 | ❌ |
-| Noto Sans CJK SC | 中文无衬线 | 同上 | SIL OFL 1.1 | ❌ |
-| Noto Sans Mono CJK SC | 中文等宽 | 同上 | SIL OFL 1.1 | ❌ |
+| Charis SIL | 正文西文 / 数学外文 | [software.sil.org/charis](https://software.sil.org/charis/) | SIL OFL 1.1 | 是（TTF 在 `fonts/truetype/SIL/charissil/`） |
+| Universalis ADF Std | 无衬线（标志、页眉小字） | [CTAN: universalis](https://ctan.org/pkg/universalis) | GPL v2+（含字体例外） | 是 |
+| Liberation Mono | 等宽（占位框里的路径文字） | [liberationfonts](https://github.com/liberationfonts/liberation-fonts) | SIL OFL 1.1 | 否 |
+| Noto Serif CJK SC | 中文正文 | [notofonts/noto-cjk](https://github.com/notofonts/noto-cjk) | SIL OFL 1.1 | 否 |
+| Noto Sans CJK SC | 中文无衬线 | 同上 | SIL OFL 1.1 | 否 |
+| Noto Sans Mono CJK SC | 中文等宽 | 同上 | SIL OFL 1.1 | 否 |
 
-**安装字体**：下载后双击安装即可（macOS 用「字体册 / Font Book」，Windows 右键“为所有用户安装”，Linux 放到 `~/.local/share/fonts/` 后执行 `fc-cache -f`）。
+安装方式是下载后装进系统：macOS 用「字体册」，Windows 右键选“为所有用户安装”，Linux 放进 `~/.local/share/fonts/` 再跑一次 `fc-cache -f`。
 
-**不想装字体？** 用下面的片段整体替换 `journaloflove-sci.sty` 中第 40–46 行（从 `\defaultfontfeatures{Ligatures=TeX}` 到 `\setCJKmonofont` 那 7 行）。这段代码会让模板自动挑选本机存在的字体，**已在 TeX Live 2025 实测通过**（两份文档各 2 页，零报错）：
+不想装字体的话，用下面的片段替换 `journaloflove-sci.sty` 第 40 到 46 行，也就是从 `\defaultfontfeatures{Ligatures=TeX}` 到 `\setCJKmonofont` 这 7 行。模板会自己挑本机有的字体。这段片段在 TeX Live 2025 上试过，两份文档各 2 页，没有报错：
 
 ```latex
 % ---- 字体自动回退：缺字体时也不会编译失败 ----
@@ -127,7 +126,7 @@ Journal-of-Wedding-Latex-Template/
   {\setCJKmonofont{Menlo}}
 ```
 
-如果想在别的系统上用，把回退字体换成对应平台的常见字体即可：
+在别的系统上用，把回退字体换成本机常见的字体：
 
 | 平台 | 中文正文回退 | 中文无衬线回退 | 等宽回退 |
 | --- | --- | --- | --- |
@@ -135,8 +134,8 @@ Journal-of-Wedding-Latex-Template/
 | Windows | `SimSun` | `Microsoft YaHei` | `Consolas` |
 | Linux | `Noto Serif CJK SC` / `Source Han Serif SC` | `Noto Sans CJK SC` | `Noto Sans Mono` |
 
-> 小技巧：临时验证某个字体名是否可用，可以单独编译一个最小文档，看日志里有没有 `not loadable`。
-> 最省事的做法仍是装齐上表字体，版式才能 100% 还原。
+> 想验证某个字体名能不能用，可以编一个最小文档，看日志里有没有 `not loadable`。
+> 想把版式原样还原，装齐上表这六种字体最省事。
 
 ### 编译
 
@@ -150,13 +149,13 @@ xelatex wedding_journal.tex
 xelatex wedding_journal.tex
 ```
 
-用 `latexmk` 一步到位：
+也可以交给 `latexmk`：
 
 ```bash
 latexmk -xelatex -interaction=nonstopmode wedding_journal.tex
 ```
 
-输出为 `wedding_journal.pdf` / `love_announcement.pdf`（各 2 页：第 1 页是期刊首页，第 2 页是正文续页与参考文献）。
+输出 `wedding_journal.pdf` 和 `love_announcement.pdf`，各 2 页。第 1 页是期刊首页，第 2 页是正文续页和参考文献。
 
 ### 自定义
 
@@ -164,20 +163,20 @@ latexmk -xelatex -interaction=nonstopmode wedding_journal.tex
 
 | 变量 | 含义 | 官宣版 | 婚礼版 |
 | --- | :--- | :---: | :---: |
-| `\PartnerA`、`\PartnerB` | 两位主角的名字 | ✅ | ✅ |
-| `\FirstMeetingDate` | 初次相遇 / 观察起点 | ✅ | ✅ |
-| `\RelationshipDate` | 确认关系日期 | ✅ | ✅ |
-| `\AnnouncementDate` | 公开（官宣）日期 | ✅ | — |
-| `\WeddingDate` | 婚礼日期 | — | ✅ |
-| `\WeddingCity`、`\WeddingVenue` | 城市与场地 | — | ✅ |
-| `\ContactEmail` | 通讯邮箱 | ✅ | ✅ |
-| `\DaysObserved`、`\SharedTrips`、`\SharedMeals` | 观察天数 / 共同旅行 / 共同用餐（正文与描述统计表用） | — | ✅ |
-| `\FutureHorizon` | 随访期（默认「终身」） | ✅ | ✅ |
-| `\OurMotto` | 备用签名句，**当前模板未引用**，可自行插到正文里 | — | — |
+| `\PartnerA`、`\PartnerB` | 两位主角的名字 | 是 | 是 |
+| `\FirstMeetingDate` | 初次相遇 / 观察起点 | 是 | 是 |
+| `\RelationshipDate` | 确认关系日期 | 是 | 是 |
+| `\AnnouncementDate` | 公开（官宣）日期 | 是 | 否 |
+| `\WeddingDate` | 婚礼日期 | 否 | 是 |
+| `\WeddingCity`、`\WeddingVenue` | 城市与场地 | 否 | 是 |
+| `\ContactEmail` | 通讯邮箱 | 是 | 是 |
+| `\DaysObserved`、`\SharedTrips`、`\SharedMeals` | 观察天数 / 共同旅行 / 共同用餐（正文与描述统计表用） | 否 | 是 |
+| `\FutureHorizon` | 随访期（默认「终身」） | 是 | 是 |
+| `\OurMotto` | 备用签名句，目前两份模板都没有引用，可以自己插到正文里 | 否 | 否 |
 
 #### 2. 改标题、摘要、期刊信息
 
-打开 `love_announcement.tex` / `wedding_journal.tex` 顶部的 `\setJOL...` 命令即可：
+标题、摘要和期刊信息都在两个 `.tex` 文件顶部的 `\setJOL...` 命令里：
 
 | 命令 | 作用 |
 | --- | --- |
@@ -204,43 +203,37 @@ latexmk -xelatex -interaction=nonstopmode wedding_journal.tex
 
 #### 4. 放照片
 
-新建 `assets/` 目录，按下面的文件名放照片即可（其它文件名也行，改 `\JOLphoto` 的路径参数即可）：
+新建 `assets/` 目录，按下面的文件名放照片。用别的名字也可以，改 `\JOLphoto` 的路径参数就行：
 
 - 官宣版：`assets/announcement-photo.jpg`
 - 婚礼版：`assets/wedding-photo.jpg`
 
 ### 常见问题
 
-**1. `! Package fontspec Error: The font "Charis SIL" cannot be found.`**
-字体没装。见上面「字体」章节，或直接套用自动回退片段。
-
-**2. 页眉 / 首页元素错位、标题和摘要重叠**
-首页刊头是按参考期刊页面用**绝对坐标（bp）**画出来的，各区域高度固定。标题超过 2 行、摘要过长、作者行太长都会挤出边界。缩短文案即可，或微调 `journaloflove-sci.sty` 里 `\JOLPutText` 的坐标参数（前两个数字依次是「距左边」和「距上边」的 bp 值）。
-
-**3. 中文显示成方框或空白**
-中文（CJK）字体没装上，见「字体」章节。
-
-**4. 超链接、定位不对**
-只编译了一次。XeLaTeX 需要跑两遍。
-
-**5. 页码不是从 1 开始**
-模板刻意从 **520** 开始（数字梗）。改 `\setcounter{page}{520}` 即可。
-
-**6. 图片 / 表格跑到奇怪的位置**
-它们都是 `[t]` 浮动体，会排在栏顶。这是期刊排版的正常行为。
-
-**7. 想在 Overleaf 上用**
-上传整个项目 → 把编译器设为 **XeLaTeX** → 若报缺字体，套用上面的自动回退片段。
+1. `! Package fontspec Error: The font "Charis SIL" cannot be found.`
+   字体没装。见上面「字体」一节，或者直接套用自动回退片段。
+2. 页眉和首页元素错位，标题与摘要重叠
+   首页刊头照参考期刊页面用绝对坐标（bp）画出来，每块区域高度固定。标题超过 2 行、摘要太长、作者行太长都会挤出边界。把文案改短，或者微调 `journaloflove-sci.sty` 里 `\JOLPutText` 的坐标参数：前两个数字是从页面左上角算起的横向和纵向偏移，单位 bp。
+3. 中文显示成方框或空白
+   中文字体没装，见「字体」一节。
+4. 超链接和定位不对
+   只编译了一次。XeLaTeX 要跑两遍。
+5. 页码不从 1 开始
+   模板故意从 520 开始。改 `\setcounter{page}{520}` 就行。
+6. 图片和表格跑到意料之外的位置
+   它们是 `[t]` 浮动体，会排在栏顶，期刊排版本来就是这样。
+7. 想在 Overleaf 上用
+   上传整个项目，把编译器设成 XeLaTeX。如果报字体缺失，套用上面的自动回退片段。
 
 ### 许可证与声明
 
-- 本仓库**尚未声明许可证**，使用前请先与作者确认；建议补充一个（代码可用 MIT，文档可用 CC BY 4.0）。
-- 所用字体各自遵循其原授权：Charis SIL、Liberation、Noto CJK 为 **SIL OFL 1.1**，Universalis ADF Std 为 **GPL v2+（含字体例外）**。分发含嵌入字体的 PDF 时请遵守相应条款。
-- 版式是对学术期刊页面样式的**风格致敬**，请仅用于私人纪念用途，不要用于冒充真实出版物或商业出版。
+- 仓库还没有声明许可证，使用前先和作者确认。建议补一个：代码用 MIT，文档用 CC BY 4.0。
+- 字体各自遵循原有授权。Charis SIL、Liberation、Noto CJK 是 SIL OFL 1.1，Universalis ADF Std 是 GPL v2+（含字体例外）。分发嵌入了字体的 PDF 时请遵守相应条款。
+- 版式是对学术期刊页面样式的模仿，只用于私人纪念，不要拿去冒充真实出版物或做商业出版。
 
 ### 致谢
 
-感谢所有见证这段关系的人。如果这个模板帮你写完了属于自己的那篇“论文”，欢迎点个 Star ⭐。
+感谢所有见证这段关系的人。如果这个模板帮你写完了属于自己的那篇“论文”，欢迎点个 Star。
 
 ---
 
@@ -248,33 +241,33 @@ latexmk -xelatex -interaction=nonstopmode wedding_journal.tex
 
 ### What is this
 
-A **ready-to-edit LaTeX template** that writes the story of two people as a full research article.
+A LaTeX template that writes the story of two people as a full research article.
 
-- **Two occasions**: `love_announcement.tex` (relationship announcement) and `wedding_journal.tex` (wedding invitation / wedding issue).
-- **Single source of truth**: every name, date and place lives in `couple-info.tex` — edit once, both documents update.
-- **Journal-grade layout**: 210 × 280 mm page, two-column body, running head/foot, three-line tables, small-type figure captions — all reconstructed at the exact absolute coordinates (bp) measured from a real journal page.
-- **Bilingual typesetting**: Latin and CJK fonts are controlled separately through `fontspec` + `xeCJK`.
-- **Photos are optional**: drop images into `assets/`; if a file is missing, a grey placeholder is drawn instead of failing the build.
+- `love_announcement.tex` is the relationship announcement; `wedding_journal.tex` is the wedding issue or invitation.
+- Both share the data in `couple-info.tex`, so one edit updates both documents.
+- The layout follows a real journal page: 210 × 280 mm, two-column body, running head and foot, three-line tables, small figure captions, all positioned at absolute coordinates (bp).
+- `fontspec` handles the Latin text, `xeCJK` the Chinese.
+- Photos are optional. Put images in `assets/`; where an image is missing, the template draws a grey placeholder and the build still succeeds.
 
 #### About 520 and 1314
 
-The journal metadata is a running pun: in Chinese, **520** sounds like “I love you” and **1314** like “forever”. Hence volume 1314, issue 520, first page 520, DOI `10.1314/jlove.520.521`, and a copyright line reading *All hearts reserved*. All of it is editable (see Customization).
+The journal metadata carries a pun. In Chinese, 520 sounds like "I love you" and 1314 like "forever", so the wedding issue is volume 1314, number 520, with the first page numbered 520, a DOI of `10.1314/jlove.520.521`, and a copyright line reading *All hearts reserved*. All of it is editable, see Customization.
 
 ### Preview
 
-**Relationship announcement · `love_announcement.tex`**
+Relationship announcement, `love_announcement.tex`:
 
-| Page 1 (journal front page) | Page 2 (body & references) |
+| Page 1 (journal front page) | Page 2 (body and references) |
 | :---: | :---: |
 | [![announcement page 1](preview/love-announcement-p1.png)](preview/love-announcement-p1.png) | [![announcement page 2](preview/love-announcement-p2.png)](preview/love-announcement-p2.png) |
 
-**Wedding issue · `wedding_journal.tex`**
+Wedding issue, `wedding_journal.tex`:
 
-| Page 1 (journal front page) | Page 2 (body & references) |
+| Page 1 (journal front page) | Page 2 (body and references) |
 | :---: | :---: |
 | [![wedding page 1](preview/wedding-journal-p1.png)](preview/wedding-journal-p1.png) | [![wedding page 2](preview/wedding-journal-p2.png)](preview/wedding-journal-p2.png) |
 
-Click any image for the 300 dpi original (3571 × 4762). The grey box in Figure 1 on page 2 is the **automatic placeholder** shown when no photo has been added yet — drop one into `assets/` and it becomes the real photograph.
+Click any image for the 300 dpi original (3571 × 4762). The grey box in Figure 1 on page 2 is the placeholder drawn when no photo is present; a file in `assets/` replaces it.
 
 ### Repository layout
 
@@ -298,14 +291,14 @@ Journal-of-Wedding-Latex-Template/
 
 | Item | Requirement |
 | --- | --- |
-| TeX distribution | TeX Live / MacTeX — a **full** install is recommended (`xeCJK`, `titlesec`, …); tested on TeX Live 2025 |
-| Engine | **XeLaTeX (required)** — pdfLaTeX and LuaLaTeX will not work |
-| Passes | At least **2** (the front page uses `remember picture` absolute positioning, which settles on the second pass) |
+| TeX distribution | TeX Live or MacTeX, full install recommended (the template needs `xeCJK`, `titlesec` and others). Tested on TeX Live 2025 |
+| Engine | XeLaTeX. pdfLaTeX and LuaLaTeX will not work |
+| Passes | At least 2. The front page is positioned with `remember picture`, which settles on the second pass |
 | Packages | `fontspec`, `xeCJK`, `geometry`, `xcolor`, `tikz`, `graphicx`, `multicol`, `amsmath`, `amssymb`, `mathtools`, `booktabs`, `tabularx`, `array`, `caption`, `fancyhdr`, `titlesec`, `hyperref`, `microtype`, `enumitem`, `etoolbox`, `ragged2e`, plus the `extarticle` class |
 
-### Fonts (the most likely stumbling block)
+### Fonts
 
-`journaloflove-sci.sty` asks for 6 fonts. **If one is missing, XeLaTeX aborts:**
+`journaloflove-sci.sty` asks for 6 fonts. Miss one and XeLaTeX stops with an error:
 
 ```
 ! Package fontspec Error: The font "Charis SIL" cannot be found.
@@ -313,16 +306,16 @@ Journal-of-Wedding-Latex-Template/
 
 | Font | Used for | Source | License | Ships with TeX Live |
 | --- | --- | --- | --- | --- |
-| Charis SIL | Latin body text & math | [software.sil.org/charis](https://software.sil.org/charis/) | SIL OFL 1.1 | ✅ (`fonts/truetype/SIL/charissil/`) |
-| Universalis ADF Std | Sans (logo, headers, small print) | [CTAN: universalis](https://ctan.org/pkg/universalis) | GPL v2+ with font exception | ✅ |
-| Liberation Mono | Monospace (placeholder path text) | [liberationfonts](https://github.com/liberationfonts/liberation-fonts) | SIL OFL 1.1 | ❌ |
-| Noto Serif CJK SC | CJK body text | [notofonts/noto-cjk](https://github.com/notofonts/noto-cjk) | SIL OFL 1.1 | ❌ |
-| Noto Sans CJK SC | CJK sans | same | SIL OFL 1.1 | ❌ |
-| Noto Sans Mono CJK SC | CJK monospace | same | SIL OFL 1.1 | ❌ |
+| Charis SIL | Latin body text & math | [software.sil.org/charis](https://software.sil.org/charis/) | SIL OFL 1.1 | yes (`fonts/truetype/SIL/charissil/`) |
+| Universalis ADF Std | Sans (logo, headers, small print) | [CTAN: universalis](https://ctan.org/pkg/universalis) | GPL v2+ with font exception | yes |
+| Liberation Mono | Monospace (placeholder path text) | [liberationfonts](https://github.com/liberationfonts/liberation-fonts) | SIL OFL 1.1 | no |
+| Noto Serif CJK SC | CJK body text | [notofonts/noto-cjk](https://github.com/notofonts/noto-cjk) | SIL OFL 1.1 | no |
+| Noto Sans CJK SC | CJK sans | same | SIL OFL 1.1 | no |
+| Noto Sans Mono CJK SC | CJK monospace | same | SIL OFL 1.1 | no |
 
-**Installing**: download and install at OS level (Font Book on macOS, right-click → “Install for all users” on Windows, or `~/.local/share/fonts/` + `fc-cache -f` on Linux).
+Installing means adding them to the OS: Font Book on macOS, right-click and choose "Install for all users" on Windows, or `~/.local/share/fonts/` plus `fc-cache -f` on Linux.
 
-**Prefer not to install anything?** Replace the 7 lines at `journaloflove-sci.sty` lines 40–46 (from `\defaultfontfeatures{Ligatures=TeX}` through `\setCJKmonofont`) with the snippet below. It picks whichever font is actually available on your machine, and has been **tested on TeX Live 2025** (both documents compile, 2 pages each, zero errors):
+If you would rather not install anything, replace lines 40 to 46 of `journaloflove-sci.sty`, the 7 lines from `\defaultfontfeatures{Ligatures=TeX}` through `\setCJKmonofont`, with the snippet below. It picks whichever font the machine actually has. The snippet was tested on TeX Live 2025: both documents compile, 2 pages each, no errors.
 
 ```latex
 % ---- Automatic font fallback: never fails on a missing font ----
@@ -362,8 +355,8 @@ On other platforms, swap the fallbacks for that platform's usual faces:
 | Windows | `SimSun` | `Microsoft YaHei` | `Consolas` |
 | Linux | `Noto Serif CJK SC` / `Source Han Serif SC` | `Noto Sans CJK SC` | `Noto Sans Mono` |
 
-> Tip: to test whether a font name resolves, compile a minimal document and check the log for `not loadable`.
-> For a pixel-accurate reproduction, install all six fonts listed above.
+> To check whether a font name resolves, compile a minimal document and look for `not loadable` in the log.
+> Installing all six fonts above is still the simplest way to reproduce the layout exactly.
 
 ### Building
 
@@ -377,13 +370,13 @@ xelatex wedding_journal.tex
 xelatex wedding_journal.tex
 ```
 
-Or with `latexmk`:
+Or let `latexmk` do it:
 
 ```bash
 latexmk -xelatex -interaction=nonstopmode wedding_journal.tex
 ```
 
-Output: `wedding_journal.pdf` / `love_announcement.pdf` — 2 pages each (page 1 is the journal front page, page 2 continues the body and carries the reference list).
+Output: `wedding_journal.pdf` and `love_announcement.pdf`, 2 pages each. Page 1 is the journal front page; page 2 continues the body and carries the reference list.
 
 ### Customization
 
@@ -391,20 +384,20 @@ Output: `wedding_journal.pdf` / `love_announcement.pdf` — 2 pages each (page 1
 
 | Variable | Meaning | Announcement | Wedding |
 | --- | :--- | :---: | :---: |
-| `\PartnerA`, `\PartnerB` | The two authors | ✅ | ✅ |
-| `\FirstMeetingDate` | First encounter / start of observation | ✅ | ✅ |
-| `\RelationshipDate` | Relationship confirmed | ✅ | ✅ |
-| `\AnnouncementDate` | Public disclosure date | ✅ | — |
-| `\WeddingDate` | Wedding date | — | ✅ |
-| `\WeddingCity`, `\WeddingVenue` | City and venue | — | ✅ |
-| `\ContactEmail` | Corresponding e-mail | ✅ | ✅ |
-| `\DaysObserved`, `\SharedTrips`, `\SharedMeals` | Days observed / trips / meals (used in the descriptive table) | — | ✅ |
-| `\FutureHorizon` | Follow-up horizon (default “终身” = lifelong) | ✅ | ✅ |
-| `\OurMotto` | Reserved motto, **not referenced by the current templates** | — | — |
+| `\PartnerA`, `\PartnerB` | The two authors | yes | yes |
+| `\FirstMeetingDate` | First encounter / start of observation | yes | yes |
+| `\RelationshipDate` | Relationship confirmed | yes | yes |
+| `\AnnouncementDate` | Public disclosure date | yes | no |
+| `\WeddingDate` | Wedding date | no | yes |
+| `\WeddingCity`, `\WeddingVenue` | City and venue | no | yes |
+| `\ContactEmail` | Corresponding e-mail | yes | yes |
+| `\DaysObserved`, `\SharedTrips`, `\SharedMeals` | Days observed / trips / meals (used in the descriptive table) | no | yes |
+| `\FutureHorizon` | Follow-up horizon (default “终身” = lifelong) | yes | yes |
+| `\OurMotto` | A reserved motto that neither template uses; insert it yourself if you want it | no | no |
 
 #### 2. Titles, abstract and journal metadata
 
-Edit the `\setJOL...` commands at the top of `love_announcement.tex` / `wedding_journal.tex`:
+The `\setJOL...` commands at the top of `love_announcement.tex` and `wedding_journal.tex` hold the metadata:
 
 | Command | Effect |
 | --- | --- |
@@ -426,54 +419,43 @@ Edit the `\setJOL...` commands at the top of `love_announcement.tex` / `wedding_
 | --- | --- |
 | `\begin{JOLtable}{caption} … \end{JOLtable}` | Journal-style compact three-line table (`tabularx`, column width) |
 | `\JOLphoto{path}{caption}` | Figure; a grey placeholder with the path is drawn if the file is missing |
-| `\JOLsource{source}` | Small “Source.” note under a figure |
+| `\JOLsource{source}` | Small "Source." note under a figure |
 | `\makeJOLfrontmatter` | Renders the whole front page; place it right after `\begin{document}` |
 
 #### 4. Adding photos
 
-Create `assets/` and use these file names (any other name works too — just change the path in `\JOLphoto`):
+Create `assets/` and drop the photos in under these names. Other names work if you change the path in `\JOLphoto`:
 
 - Announcement: `assets/announcement-photo.jpg`
 - Wedding: `assets/wedding-photo.jpg`
 
 ### FAQ
 
-**1. `! Package fontspec Error: The font "Charis SIL" cannot be found.`**
-A font is missing — see [Fonts](#fonts-the-most-likely-stumbling-block), or apply the automatic fallback snippet.
-
-**2. Front-page elements are misaligned or overlapping**
-The masthead is drawn at **absolute coordinates (bp)** with fixed-height bands. A title longer than 2 lines, an overlong abstract or a long author line will overflow. Shorten the text, or nudge the coordinates passed to `\JOLPutText` in `journaloflove-sci.sty` (the first two numbers are the x/y offsets in bp from the page's top-left corner).
-
-**3. Chinese text renders as boxes or is missing**
-The CJK fonts are not installed — see [Fonts](#fonts-the-most-likely-stumbling-block).
-
-**4. Links or positions are wrong**
-You compiled only once. XeLaTeX needs two passes.
-
-**5. The page number doesn't start at 1**
-Intentional: it starts at **520** for the pun. Change `\setcounter{page}{520}`.
-
-**6. Figures or tables jump somewhere unexpected**
-They are `[t]` floats pinned to the top of a column — normal journal behaviour (`JOLtable` and `\JOLphoto` already request `[t]`).
-
-**7. Using Overleaf**
-Upload the project, set the compiler to **XeLaTeX**, and if a font error appears, apply the fallback snippet above.
+1. `! Package fontspec Error: The font "Charis SIL" cannot be found.`
+   A font is missing. See [Fonts](#fonts), or apply the fallback snippet.
+2. Front-page elements are misaligned or overlapping
+   The masthead is drawn at absolute coordinates (bp) in bands of fixed height. A title longer than 2 lines, an overlong abstract or a long author line will spill past its band. Shorten the text, or adjust the coordinates passed to `\JOLPutText` in `journaloflove-sci.sty`: the first two numbers are the horizontal and vertical offsets in bp from the top-left corner of the page.
+3. Chinese text shows up as boxes or goes missing
+   The CJK fonts are not installed. See [Fonts](#fonts).
+4. Links or positions are wrong
+   You compiled once. XeLaTeX needs two passes.
+5. The page number does not start at 1
+   That is deliberate, it starts at 520. Change `\setcounter{page}{520}`.
+6. Figures or tables land somewhere unexpected
+   They are `[t]` floats pinned to the top of a column, which is how journal pages work; `JOLtable` and `\JOLphoto` set `[t]` themselves.
+7. Using Overleaf
+   Upload the project and set the compiler to XeLaTeX. If a font error appears, apply the fallback snippet above.
 
 ### License & notices
 
-- This repository **does not declare a license yet** — please confirm with the author before reuse; adding one is recommended (MIT for code, CC BY 4.0 for docs).
-- The fonts keep their own licenses: Charis SIL, Liberation and Noto CJK are **SIL OFL 1.1**; Universalis ADF Std is **GPL v2+ with a font exception**. Respect those terms when distributing PDFs with embedded fonts.
-- The layout is a stylistic homage to academic journal page design. Keep it for personal, commemorative use — do not use it to impersonate a real publication or for commercial publishing.
+- No license is declared yet. Check with the author before reusing this. Adding one is worth doing: MIT for the code, CC BY 4.0 for the docs.
+- The fonts keep their own licenses. Charis SIL, Liberation and Noto CJK are SIL OFL 1.1; Universalis ADF Std is GPL v2+ with a font exception. Respect those terms when you distribute a PDF with embedded fonts.
+- The layout imitates the look of an academic journal page. Use it for private keepsakes, not to pass as a real publication or to publish commercially.
 
 ### Acknowledgements
 
-Thanks to everyone who witnessed this relationship. If the template helped you finish a paper of your own, a ⭐ is appreciated.
+Thanks to everyone who witnessed this relationship. If this template helped you finish a paper of your own, a star is welcome.
 
 ---
 
-*Journal of Love — Cupid Press. All hearts reserved.*
-=======
-<img width="3571" height="4762" alt="Journal of Love_01" src="https://github.com/user-attachments/assets/9990aa80-3bf7-4028-bd48-46779fdf7c47" />
-<img width="3571" height="4762" alt="Journal of Love_02" src="https://github.com/user-attachments/assets/d91dad31-0db0-4a60-aba0-5ae86e08f06f" />
-
->>>>>>> 96c08d246e17f709c89774419893d19f77d848ee
+*Journal of Love, Cupid Press. All hearts reserved.*
