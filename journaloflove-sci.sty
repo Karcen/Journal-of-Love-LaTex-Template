@@ -1,0 +1,276 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{journaloflove-sci}[2026/10/03 SCI-page replica for Journal of Love]
+
+\RequirePackage{fontspec}
+\RequirePackage{xeCJK}
+\RequirePackage{geometry}
+\RequirePackage{xcolor}
+\RequirePackage{tikz}
+\RequirePackage{graphicx}
+\RequirePackage{multicol}
+\RequirePackage{amsmath,amssymb,mathtools}
+\RequirePackage{booktabs,tabularx,array}
+\RequirePackage{caption}
+\RequirePackage{fancyhdr}
+\RequirePackage{titlesec}
+\RequirePackage{hyperref}
+\RequirePackage{microtype}
+\RequirePackage{enumitem}
+\RequirePackage{etoolbox}
+\RequirePackage{ragged2e}
+
+% ===== Physical page & column geometry measured from the supplied SCI PDF =====
+% Reference page: 595.276 x 793.701 pt.
+% Body columns: x = 37.587..288.68 and 306.59..557.66 pt.
+\geometry{
+  paperwidth=595.276bp,
+  paperheight=793.701bp,
+  left=37.587bp,
+  right=37.616bp,
+  top=51.300bp,
+  bottom=49.300bp,
+  headheight=10bp,
+  headsep=7.65bp,
+  footskip=10.45bp
+}
+\setlength{\columnsep}{17.913bp}
+\setlength{\columnseprule}{0pt}
+
+% ===== Fonts measured from the supplied article =====
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Charis SIL}
+\setsansfont{Universalis ADF Std}
+\setmonofont{Liberation Mono}
+\setCJKmainfont[AutoFakeBold=2.3,AutoFakeSlant=.16]{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+
+\definecolor{RefTeal}{RGB}{9,118,160}
+\definecolor{RefLinkBlue}{RGB}{33,150,209}
+\definecolor{MastGray}{RGB}{231,231,231}
+\definecolor{WarmGold}{RGB}{191,127,29}
+\definecolor{SoftRose}{RGB}{246,226,231}
+\definecolor{SoftGray}{RGB}{120,120,120}
+
+\hypersetup{colorlinks=true,linkcolor=RefLinkBlue,urlcolor=RefLinkBlue,citecolor=RefLinkBlue,pdfborder={0 0 0}}
+
+% Reference body ~7.97 pt with ~10.49 pt baselines.
+\AtBeginDocument{\fontsize{7.9701}{10.488}\selectfont}
+\setlength{\parindent}{11.96bp}
+\setlength{\parskip}{0pt}
+\emergencystretch=1.25em
+\raggedbottom
+
+% ===== Running header/footer matching later pages =====
+\newcommand{\JOLRunningAuthor}{A. Author et al.}
+\newcommand{\JOLRunningJournal}{Journal of Love 520 (1314) 521--532}
+\newcommand{\setRunningAuthor}[1]{\renewcommand{\JOLRunningAuthor}{#1}}
+\newcommand{\setRunningJournal}[1]{\renewcommand{\JOLRunningJournal}{#1}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\fontsize{7.173}{8.2}\selectfont\itshape \JOLRunningAuthor}
+\fancyhead[R]{\fontsize{7.173}{8.2}\selectfont\itshape \JOLRunningJournal}
+\fancyfoot[C]{\fontsize{7.173}{8.2}\selectfont\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% ===== Section hierarchy: same-size bold / italic hierarchy as reference =====
+\titleformat{\section}{\fontsize{7.9701}{10.488}\selectfont\bfseries}{\thesection.}{0.55em}{}
+\titlespacing*{\section}{0pt}{17.5bp}{10.0bp}
+\titleformat{\subsection}{\fontsize{7.9701}{10.488}\selectfont\itshape}{\thesubsection.}{0.55em}{}
+\titlespacing*{\subsection}{0pt}{10.5bp}{4.0bp}
+\titleformat{\subsubsection}{\fontsize{7.9701}{10.488}\selectfont\itshape}{\thesubsubsection.}{0.55em}{}
+\titlespacing*{\subsubsection}{0pt}{9.5bp}{3.5bp}
+
+\DeclareCaptionFont{jolsmall}{\fontsize{6.3759}{8.0}\selectfont}
+\captionsetup{font=jolsmall,labelfont=bf,labelsep=period,skip=3bp}
+\setlist[itemize]{leftmargin=1.3em,itemsep=1bp,topsep=2bp}
+\setlength{\abovecaptionskip}{4bp}
+\setlength{\belowcaptionskip}{2bp}
+\setlength{\textfloatsep}{9bp plus 2bp minus 2bp}
+\setlength{\floatsep}{7bp plus 2bp minus 2bp}
+\setlength{\intextsep}{7bp plus 2bp minus 2bp}
+
+% ===== Metadata fields =====
+\newcommand{\JOLMeta}{Journal of Love 520 (1314) 521--532}
+\newcommand{\JOLNetwork}{HeartDirect}
+\newcommand{\JOLHomeURL}{www.foreverlove.com/jol}
+\newcommand{\JOLTitle}{Untitled love article}
+\newcommand{\JOLAuthors}{Author A, Author B*}
+\newcommand{\JOLAffilA}{Two-Person Research Unit for Affection, Daily Life, and Future Plans}
+\newcommand{\JOLAffilB}{}
+\newcommand{\JOLKeywords}{Love; Stable matching; Shared life; Long-term follow-up}
+\newcommand{\JOLAbstract}{Abstract placeholder.}
+\newcommand{\JOLCorrespondence}{Two-Person Research Unit for Affection, Daily Life, and Future Plans.}
+\newcommand{\JOLEmail}{xxx@foreverlove.com}
+\newcommand{\JOLDOI}{https://doi.org/10.5200/jlove.1314.521}
+\newcommand{\JOLReceived}{Received 5 May 2020; Received in revised form 13 January 2014; Accepted 21 May 2026}
+\newcommand{\JOLOnline}{Available online 20 May 2021}
+\newcommand{\JOLCopyright}{0520-1314/© 2026 Cupid Press. All hearts reserved.}
+\newcommand{\JOLInfoTitle}{A R T I C L E\ \ I N F O}
+\newcommand{\JOLAbstractTitle}{A B S T R A C T}
+\newcommand{\JOLCoverSub}{ROMANCE STUDIES}
+\newcommand{\JOLCoverIssue}{520 / 1314 / 521}
+\newcommand{\JOLFootnoteText}{The underlying relationship dataset contains private messages, shared itineraries and everyday memories; disclosure requires mutual consent.}
+
+\newcommand{\setJOLMeta}[1]{\renewcommand{\JOLMeta}{#1}\setRunningJournal{#1}}
+\newcommand{\setJOLTitle}[1]{\renewcommand{\JOLTitle}{#1}}
+\newcommand{\setJOLAuthors}[1]{\renewcommand{\JOLAuthors}{#1}}
+\newcommand{\setJOLAffilA}[1]{\renewcommand{\JOLAffilA}{#1}}
+\newcommand{\setJOLAffilB}[1]{\renewcommand{\JOLAffilB}{#1}}
+\newcommand{\setJOLKeywords}[1]{\renewcommand{\JOLKeywords}{#1}}
+\newcommand{\setJOLAbstract}[1]{\renewcommand{\JOLAbstract}{#1}}
+\newcommand{\setJOLCorrespondence}[1]{\renewcommand{\JOLCorrespondence}{#1}}
+\newcommand{\setJOLEmail}[1]{\renewcommand{\JOLEmail}{#1}}
+\newcommand{\setJOLDOI}[1]{\renewcommand{\JOLDOI}{#1}}
+\newcommand{\setJOLReceived}[1]{\renewcommand{\JOLReceived}{#1}}
+\newcommand{\setJOLOnline}[1]{\renewcommand{\JOLOnline}{#1}}
+\newcommand{\setJOLCopyright}[1]{\renewcommand{\JOLCopyright}{#1}}
+\newcommand{\setJOLCoverSub}[1]{\renewcommand{\JOLCoverSub}{#1}}
+\newcommand{\setJOLCoverIssue}[1]{\renewcommand{\JOLCoverIssue}{#1}}
+\newcommand{\setJOLFootnoteText}[1]{\renewcommand{\JOLFootnoteText}{#1}}
+
+% ===== Coordinate helpers: positions are in PDF bp from top-left =====
+\newcommand{\JOLPut}[4][]{%
+  \node[anchor=north west,inner sep=0pt,#1] at ([xshift=#2bp,yshift=-#3bp]current page.north west) {#4};%
+}
+\newcommand{\JOLPutText}[5][]{%
+  \node[anchor=north west,inner sep=0pt,text width=#4bp,align=left,#1] at ([xshift=#2bp,yshift=-#3bp]current page.north west) {#5};%
+}
+
+% ===== Faux Cupid publisher mark, sized to reference Elsevier-logo footprint =====
+\newcommand{\CupidPublisherMark}{%
+\begin{tikzpicture}[x=1bp,y=1bp]
+  % Custom Cupid publisher emblem. The wordmark is intentionally BELOW
+  % the emblem, matching the visual hierarchy of the reference publisher mark.
+  \fill[SoftRose]
+    (31,39) .. controls (24,50) and (10,48) .. (10,34)
+    .. controls (10,23) and (20,15) .. (31,7)
+    .. controls (42,15) and (52,23) .. (52,34)
+    .. controls (52,48) and (38,50) .. (31,39) -- cycle;
+  \draw[WarmGold,line width=1.05bp] (4,10) -- (56,50);
+  \fill[WarmGold] (56,50) -- (48.2,47.3) -- (51.4,40.2) -- cycle;
+  \draw[WarmGold,line width=.75bp] (11,21) .. controls (1.5,27) and (2.5,40) .. (14,46);
+  \draw[WarmGold,line width=.75bp] (51,21) .. controls (60.5,27) and (59.5,40) .. (48,46);
+  \draw[WarmGold,line width=.8bp] (4,10)--(10,13.7) (4,10)--(6.1,17.0);
+  \node[font=\sffamily\bfseries\fontsize{8.7}{9}\selectfont,text=WarmGold] at (31,-3.5) {CUPID};
+\end{tikzpicture}%
+}
+
+\newcommand{\JOLCoverMini}{%
+\begin{tikzpicture}[x=1bp,y=1bp]
+  % Miniature custom journal cover, framed and proportioned like the reference.
+  \draw[fill=white,draw=gray!45,line width=.35bp] (0,0) rectangle (56.7,71.5);
+  \fill[gray!17] (0,0) rectangle (7.0,71.5);
+  \node[rotate=90,font=\sffamily\fontsize{3.8}{4.0}\selectfont,text=gray!65!black]
+    at (2.5,35.75) {JOURNAL OF LOVE};
+
+  \node[font=\sffamily\bfseries\fontsize{5.4}{5.8}\selectfont,text=gray!72!black,align=center]
+    at (32,61.3) {JOURNAL\\OF LOVE};
+  \draw[gray!35,line width=.3bp] (12.5,49.0) -- (51.0,49.0);
+
+  \fill[WarmGold] (13.0,31.0) rectangle (50.5,40.0);
+  \node[font=\sffamily\bfseries\fontsize{5.1}{5.3}\selectfont,text=white] at (26.75,37.5) {LOVE};
+  \node[font=\sffamily\fontsize{4.15}{4.6}\selectfont,text=gray!68!black,align=center]
+    at (12.75,23.8) {\JOLCoverSub};
+  \node[font=\sffamily\fontsize{3.75}{4.2}\selectfont,text=gray!60!black]
+    at (23.75,8.7) {\JOLCoverIssue};
+\end{tikzpicture}%
+}
+
+\newcommand{\JOLUpdateIcon}{%
+\begin{tikzpicture}[x=1bp,y=1bp]
+  \draw[fill=white,draw=gray!45,rounded corners=.8bp,line width=.3bp] (0,0) rectangle (28.7,28.5);
+  \fill[RefTeal] (14.3,9.5) circle (5.4);
+  \fill[WarmGold,opacity=.92] (11.2,7.3) circle (4.3);
+  \node[font=\sffamily\fontsize{3.7}{4}\selectfont,text=gray!70!black,align=center] at (5.3,25.1) {Check for\\love updates};
+\end{tikzpicture}%
+}
+
+% ===== First-page fixed-coordinate front matter =====
+\newcommand{\JOLFrontOverlay}{%
+\begin{tikzpicture}[remember picture,overlay]
+  % top running metadata
+  \JOLPutText[align=center,text=RefTeal,font=\fontsize{7.173}{8.2}\selectfont]{37.587}{33.452}{520.073}{\JOLMeta}
+
+  % masthead rules and gray panel
+  \fill[MastGray] ([xshift=110.61bp,yshift=-61.85bp]current page.north west) rectangle ++(376.29bp,-65.21bp);
+  \fill[black] ([xshift=37.61bp,yshift=-133.05bp]current page.north west) rectangle ++(520.05bp,-2.99bp);
+
+  % custom publisher logo and custom journal cover
+  \JOLPut{36.79}{61.97}{\begin{minipage}[t][65.2bp][c]{59.6bp}\centering\CupidPublisherMark\end{minipage}}
+  \JOLPut{501.05}{55.45}{\JOLCoverMini}
+
+  % center banner typography
+  \JOLPutText[align=center,font=\fontsize{7.9701}{9.2}\selectfont]{110.61}{64.794}{376.29}{Contents lists available at \textcolor{RefLinkBlue}{\JOLNetwork}}
+  \JOLPutText[align=center,font=\fontsize{13.9475}{16.3}\selectfont]{110.61}{85.037}{376.29}{Journal of Love}
+  \JOLPutText[align=center,font=\sffamily\fontsize{7.9701}{9.0}\selectfont]{110.61}{118.18}{376.29}{journal homepage: \textcolor{RefLinkBlue}{\JOLHomeURL}}
+
+  % title / author / affiliations
+  \JOLPutText[font=\fontsize{13.4495}{17.234}\selectfont]{37.587}{160.966}{395.0}{\JOLTitle}
+  \JOLPutText[font=\fontsize{10.5604}{13.0}\selectfont]{37.587}{206.658}{430.0}{\JOLAuthors}
+  \JOLPutText[font=\fontsize{6.3759}{8.56}\selectfont\itshape]{37.587}{227.56}{520.073}{\textsuperscript{a}\,\JOLAffilA\ifdefempty{\JOLAffilB}{}{\\\textsuperscript{b}\,\JOLAffilB}}
+  \JOLPut{500.93}{148.68}{\JOLUpdateIcon}
+
+  % frontmatter separator
+  \fill[black] ([xshift=37.61bp,yshift=-255.05bp]current page.north west) rectangle ++(520.05bp,-0.24bp);
+
+  % article info / abstract titles and rules
+  \JOLPutText[font=\fontsize{6.9737}{8.2}\selectfont]{37.587}{268.944}{133.253}{\JOLInfoTitle}
+  \JOLPutText[font=\fontsize{6.9737}{8.2}\selectfont]{201.997}{268.944}{355.663}{\JOLAbstractTitle}
+  \fill[black] ([xshift=37.61bp,yshift=-286.98bp]current page.north west) rectangle ++(133.23bp,-0.25bp);
+  \fill[black] ([xshift=202.02bp,yshift=-286.98bp]current page.north west) rectangle ++(355.64bp,-0.25bp);
+
+  % keywords block
+  \JOLPutText[font=\fontsize{6.3759}{8.56}\selectfont]{37.587}{288.141}{133.253}{\textit{Keywords:}\\[-1bp]\JOLKeywords}
+
+  % abstract block, same measured size as source abstract
+  \JOLPutText[font=\fontsize{7.173}{9.55}\selectfont]{201.997}{288.209}{355.663}{\JOLAbstract}
+
+  % bottom line of frontmatter
+  \fill[black] ([xshift=37.61bp,yshift=-400.80bp]current page.north west) rectangle ++(520.05bp,-0.25bp);
+
+  % first-page footnote / publication metadata zone
+  \fill[black] ([xshift=37.50bp,yshift=-630.05bp]current page.north west) rectangle ++(36.21bp,-0.40bp);
+  \JOLPutText[font=\fontsize{7.173}{9.58}\selectfont]{42.63}{635.80}{515.0}{* Corresponding author at: \JOLCorrespondence}
+  \JOLPutText[font=\fontsize{7.173}{9.58}\selectfont]{49.55}{645.97}{508.0}{\textit{E-mail address:} \textcolor{RefLinkBlue}{\JOLEmail}.}
+  \JOLPutText[font=\fontsize{7.173}{9.58}\selectfont]{42.86}{658.49}{514.8}{\textsuperscript{1}\,\JOLFootnoteText}
+
+  \JOLPutText[font=\fontsize{7.173}{9.52}\selectfont,text=RefLinkBlue]{37.587}{695.66}{520.0}{\JOLDOI}
+  \JOLPutText[font=\fontsize{7.173}{9.52}\selectfont]{37.587}{705.18}{520.0}{\JOLReceived}
+  \JOLPutText[font=\fontsize{7.173}{9.52}\selectfont]{37.52}{714.70}{520.0}{\JOLOnline}
+  \JOLPutText[font=\fontsize{7.173}{9.52}\selectfont]{37.52}{724.32}{520.0}{\JOLCopyright}
+\end{tikzpicture}%
+}
+
+% Reserve vertical space so the first body section begins at the measured y~422.6 pt.
+\newcommand{\makeJOLfrontmatter}{%
+  \twocolumn[{%
+    \JOLFrontOverlay
+    \vspace*{371.8bp}% tuned against reference; body starts at ~422.6bp
+  }]%
+  \thispagestyle{empty}% source first page has no centered folio
+  \enlargethispage{-144.0bp}% reserve exact lower metadata/footnote band
+}
+
+% ===== Reference-style compact tables =====
+\newenvironment{JOLtable}[1]{%
+  \begin{table}[t]\centering\fontsize{6.3759}{8.3}\selectfont\caption{#1}\vspace{-1bp}%
+}{\end{table}}
+
+\newcommand{\JOLsource}[1]{\par\vspace{1bp}{\fontsize{6.3759}{7.5}\selectfont Source. #1.}\par}
+
+% ===== Photo placeholder that behaves like a scientific figure =====
+\newcommand{\JOLphoto}[2]{%
+\begin{figure}[t]
+\centering
+\IfFileExists{#1}{\includegraphics[width=\columnwidth]{#1}}{%
+\begin{tikzpicture}[x=1bp,y=1bp]
+  \draw[gray!55,fill=gray!7] (0,0) rectangle (240,125);
+  \node[align=center,font=\sffamily\fontsize{7}{8}\selectfont,text=gray!65!black] at (120,62.5)
+  {PHOTO PLACEHOLDER\\\texttt{#1}};
+\end{tikzpicture}}
+\caption{#2}
+\end{figure}}
+
