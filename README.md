@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ![婚礼学报 demo](https://github.com/user-attachments/assets/57f24fee-93a2-42c4-ad3c-3f65371d2fbf)
 
 # Journal of Love · 婚礼学报 LaTeX 模板
@@ -471,3 +472,8 @@ Thanks to everyone who witnessed this relationship. If the template helped you f
 ---
 
 *Journal of Love — Cupid Press. All hearts reserved.*
+=======
+<img width="3571" height="4762" alt="Journal of Love_01" src="https://github.com/user-attachments/assets/9990aa80-3bf7-4028-bd48-46779fdf7c47" />
+<img width="3571" height="4762" alt="Journal of Love_02" src="https://github.com/user-attachments/assets/d91dad31-0db0-4a60-aba0-5ae86e08f06f" />
+
+>>>>>>> 96c08d246e17f709c89774419893d19f77d848ee
