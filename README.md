@@ -34,12 +34,19 @@ A LaTeX template that turns a wedding invitation or a relationship announcement 
 
 ### 效果预览
 
-| 恋爱官宣版 | 婚礼学报版 |
-| :---: | :---: |
-| [![love announcement](preview/love-announcement-p1.png)](preview/love-announcement-p1.png) | [![wedding journal](preview/wedding-journal-p1.png)](preview/wedding-journal-p1.png) |
-| `love_announcement.tex` | `wedding_journal.tex` |
+**恋爱官宣版 · `love_announcement.tex`**
 
-仓库里已附带一份编译成品 [Journal of Love.pdf](Journal%20of%20Love.pdf)（恋爱官宣版，共 2 页）。
+| 第 1 页（期刊首页） | 第 2 页（正文与参考文献） |
+| :---: | :---: |
+| [![恋爱官宣版第 1 页](preview/love-announcement-p1.png)](preview/love-announcement-p1.png) | [![恋爱官宣版第 2 页](preview/love-announcement-p2.png)](preview/love-announcement-p2.png) |
+
+**婚礼学报版 · `wedding_journal.tex`**
+
+| 第 1 页（期刊首页） | 第 2 页（正文与参考文献） |
+| :---: | :---: |
+| [![婚礼学报版第 1 页](preview/wedding-journal-p1.png)](preview/wedding-journal-p1.png) | [![婚礼学报版第 2 页](preview/wedding-journal-p2.png)](preview/wedding-journal-p2.png) |
+
+点击任意图片可查看 300 dpi 原图（3571 × 4762）。第 2 页 Figure 1 里那个灰框是**没放照片时自动生成的占位框**——放进 `assets/` 后就会变成真实照片。
 
 ### 文件结构
 
@@ -49,11 +56,14 @@ Journal-of-Wedding-Latex-Template/
 ├── love_announcement.tex    # 恋爱官宣版
 ├── wedding_journal.tex      # 婚礼学报版
 ├── journaloflove-sci.sty    # 版式与样式（仿 SCI 首页 + 双栏正文）
-├── preview/                 # README 预览图
-├── assets/                  # 照片目录（仓库未包含，需要自己新建）
-│   ├── announcement-photo.jpg
-│   └── wedding-photo.jpg
-└── Journal of Love.pdf      # 已编译的示例成品
+├── preview/                 # README 预览图（各 2 页，300 dpi）
+│   ├── love-announcement-p1.png
+│   ├── love-announcement-p2.png
+│   ├── wedding-journal-p1.png
+│   └── wedding-journal-p2.png
+└── assets/                  # 照片目录（仓库未包含，需要自己新建）
+    ├── announcement-photo.jpg
+    └── wedding-photo.jpg
 ```
 
 ### 环境要求
@@ -251,12 +261,19 @@ The journal metadata is a running pun: in Chinese, **520** sounds like “I love
 
 ### Preview
 
-| Relationship announcement | Wedding issue |
-| :---: | :---: |
-| [![love announcement](preview/love-announcement-p1.png)](preview/love-announcement-p1.png) | [![wedding journal](preview/wedding-journal-p1.png)](preview/wedding-journal-p1.png) |
-| `love_announcement.tex` | `wedding_journal.tex` |
+**Relationship announcement · `love_announcement.tex`**
 
-A compiled sample — [Journal of Love.pdf](Journal%20of%20Love.pdf), the announcement version, 2 pages — ships with the repository.
+| Page 1 (journal front page) | Page 2 (body & references) |
+| :---: | :---: |
+| [![announcement page 1](preview/love-announcement-p1.png)](preview/love-announcement-p1.png) | [![announcement page 2](preview/love-announcement-p2.png)](preview/love-announcement-p2.png) |
+
+**Wedding issue · `wedding_journal.tex`**
+
+| Page 1 (journal front page) | Page 2 (body & references) |
+| :---: | :---: |
+| [![wedding page 1](preview/wedding-journal-p1.png)](preview/wedding-journal-p1.png) | [![wedding page 2](preview/wedding-journal-p2.png)](preview/wedding-journal-p2.png) |
+
+Click any image for the 300 dpi original (3571 × 4762). The grey box in Figure 1 on page 2 is the **automatic placeholder** shown when no photo has been added yet — drop one into `assets/` and it becomes the real photograph.
 
 ### Repository layout
 
@@ -266,11 +283,14 @@ Journal-of-Wedding-Latex-Template/
 ├── love_announcement.tex    # relationship-announcement issue
 ├── wedding_journal.tex      # wedding issue
 ├── journaloflove-sci.sty    # layout & styling (journal front page + two-column body)
-├── preview/                 # README preview images
-├── assets/                  # photo folder (not in the repo — create it yourself)
-│   ├── announcement-photo.jpg
-│   └── wedding-photo.jpg
-└── Journal of Love.pdf      # sample compiled output
+├── preview/                 # README preview images (2 pages each, 300 dpi)
+│   ├── love-announcement-p1.png
+│   ├── love-announcement-p2.png
+│   ├── wedding-journal-p1.png
+│   └── wedding-journal-p2.png
+└── assets/                  # photo folder (not in the repo — create it yourself)
+    ├── announcement-photo.jpg
+    └── wedding-photo.jpg
 ```
 
 ### Requirements
